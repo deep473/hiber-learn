@@ -1,0 +1,30 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+	
+<hibernate-configuration>
+		<session-factory>
+				
+				<property name="hibernate.connection.url">jdbc:mysql://localhost/college2</property>
+		        <property name="hibernate.connection.username">root</property>
+		        <property name="hibernate.connection.password">root1234</property>
+		        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>   
+				
+				<property name="hbm2ddl.auto">create</property>
+				
+				
+				
+				<mapping class="example.manyToMany.Fresher"/>
+				<mapping class="example.manyToMany.Job"/>
+				
+				<mapping class="example.oneToMany.Customer"/>
+				<mapping class="example.oneToMany.Orders"/>
+				
+				<mapping class="example.oneToOne.Person"/>
+				<mapping class="example.oneToOne.Passport"/>
+				
+				
+		</session-factory>
+</hibernate-configuration>
+        
+        
